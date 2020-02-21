@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D35582CB23FF5B43006C0042 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35582CA23FF5B43006C0042 /* main.swift */; };
+		D35582D623FF5B6B006C0042 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35582D123FF5B6A006C0042 /* Rank.swift */; };
+		D35582D723FF5B6B006C0042 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35582D223FF5B6A006C0042 /* Suit.swift */; };
+		D35582D823FF5B6B006C0042 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35582D323FF5B6B006C0042 /* Hand.swift */; };
+		D35582D923FF5B6B006C0042 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35582D423FF5B6B006C0042 /* Card.swift */; };
+		D35582DA23FF5B6B006C0042 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35582D523FF5B6B006C0042 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,11 @@
 /* Begin PBXFileReference section */
 		D35582C723FF5B43006C0042 /* beggarThyNeighbour */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = beggarThyNeighbour; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35582CA23FF5B43006C0042 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D35582D123FF5B6A006C0042 /* Rank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rank.swift; path = ../../AlternateCommandLineWar/AlternateCommandLineWar/Rank.swift; sourceTree = "<group>"; };
+		D35582D223FF5B6A006C0042 /* Suit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Suit.swift; path = ../../AlternateCommandLineWar/AlternateCommandLineWar/Suit.swift; sourceTree = "<group>"; };
+		D35582D323FF5B6B006C0042 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hand.swift; path = ../../AlternateCommandLineWar/AlternateCommandLineWar/Hand.swift; sourceTree = "<group>"; };
+		D35582D423FF5B6B006C0042 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = ../../AlternateCommandLineWar/AlternateCommandLineWar/Card.swift; sourceTree = "<group>"; };
+		D35582D523FF5B6B006C0042 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deck.swift; path = ../../AlternateCommandLineWar/AlternateCommandLineWar/Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				D35582CA23FF5B43006C0042 /* main.swift */,
+				D35582D423FF5B6B006C0042 /* Card.swift */,
+				D35582D523FF5B6B006C0042 /* Deck.swift */,
+				D35582D323FF5B6B006C0042 /* Hand.swift */,
+				D35582D123FF5B6A006C0042 /* Rank.swift */,
+				D35582D223FF5B6A006C0042 /* Suit.swift */,
 			);
 			path = beggarThyNeighbour;
 			sourceTree = "<group>";
@@ -120,7 +135,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35582DA23FF5B6B006C0042 /* Deck.swift in Sources */,
+				D35582D823FF5B6B006C0042 /* Hand.swift in Sources */,
 				D35582CB23FF5B43006C0042 /* main.swift in Sources */,
+				D35582D923FF5B6B006C0042 /* Card.swift in Sources */,
+				D35582D723FF5B6B006C0042 /* Suit.swift in Sources */,
+				D35582D623FF5B6B006C0042 /* Rank.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
