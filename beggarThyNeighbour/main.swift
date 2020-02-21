@@ -27,6 +27,7 @@ struct BeggarThyNeigbourGame {
     //create the deck to be used for the game
     var gameDeck = Deck()
     
+    //create a variable to track if game is over
     var gameIsOngoing = true
     
     
@@ -61,12 +62,15 @@ struct BeggarThyNeigbourGame {
         }
     }
     
+    //create a function to announce the winners
     mutating func gameIsOver(winnerIs: String) {
         gameIsOngoing = false
         print("The winner is \(winnerIs)!")
     }
     
+    //create a function to see if someone has lost
     mutating func checkIfSomeoneHasLost() {
+        //Check to see if the player's cards are 0
         if player1.cards.count <= 0 {
             gameIsOver(winnerIs: "player two")
         } else if player2.cards.count <= 0 {
@@ -74,9 +78,54 @@ struct BeggarThyNeigbourGame {
         }
     }
     
+    //Draw a card from the hand and add it to the pot of gold
+    mutating func playCard(player: Hand) {
+        let cardToAdd = player.dealTopCard()
+        potOfGold.append(cardToAdd!)
+    }
+    
+    //Makes the offensive player play his card and pass the turn
+    mutating func playHand() {
+        checkIfSomeoneHasLost()
+        let cardThatIsPlayed = offence.topCard!
+        playCard(player: offence)
+        //if the card played is a face card, do the showdown
+        if cardThatIsPlayed.rank.rank >= 11 {
+            initiateAShowdown(cardToDefendAgainst: cardThatIsPlayed)
+            //if there is no showdown, change who is on offence
+        } else {
+            switchWhoIsOnOffence()
+        }
+    }
+    
+    //function to perform a showdown
+    mutating func initiateAShowdown(cardToDefendAgainst: Card) {
+        
+        //how many chances the defence gets
+        let numberOfChances = cardToDefendAgainst.rank.rank - 10
+        
+        //defence plays until they get a face card
+        for _ in 1...numberOfChances {
+            let attemptedDefendingCard = defence.topCard!
+            playCard(player: defence)
+            //if they play a face card, do another showdown after switching offence
+            if attemptedDefendingCard.rank.rank >= 11 {
+                switchWhoIsOnOffence()
+                initiateAShowdown(cardToDefendAgainst: attemptedDefendingCard)
+                return
+            }
+        }
+        
+        //if they didn't get a face, offence gets all cards and offence swaps
+        offence.cards.append(contentsOf: potOfGold)
+        switchWhoIsOnOffence()
+    }
+    
     //play the game
     func play() {
-        
+        while gameIsOngoing {
+            
+        }
     }
     
 }
