@@ -205,3 +205,5 @@ struct BeggarThyNeigbourGame {
 var ultimateBeg = BeggarThyNeigbourGame()
 ultimateBeg.play()
 
+// Ignore comment
+
