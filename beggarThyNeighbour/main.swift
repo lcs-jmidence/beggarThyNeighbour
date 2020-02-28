@@ -61,7 +61,7 @@ struct BeggarThyNeigbourGame {
             }
         }
         
-        //shuffle the deck and divide up the cards into each player's hand
+        //shuffle the deck and divide up the cards into each player's hand.
         for i in 0...51 {
             
             //get the index of a random card in the full deck
@@ -206,4 +206,5 @@ var ultimateBeg = BeggarThyNeigbourGame()
 ultimateBeg.play()
 
 // Ignore comment
+//Get the Code
 
